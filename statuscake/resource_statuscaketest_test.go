@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/DreamItGetIT/statuscake"
+	"github.com/andrewn3wman7/statuscake"
 	"github.com/hashicorp/terraform/helper/resource"
 	"github.com/hashicorp/terraform/terraform"
 )

@@ -1,7 +1,7 @@
 package statuscake
 
 import (
-	"github.com/DreamItGetIT/statuscake"
+	"github.com/andrewn3wman7/statuscake"
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
 )
@@ -22,9 +22,11 @@ func Provider() terraform.ResourceProvider {
 				Description: "API Key for StatusCake",
 			},
 		},
-
 		ResourcesMap: map[string]*schema.Resource{
-			"statuscake_test": resourceStatusCakeTest(),
+			"statuscake_test":          resourceStatusCakeTest(),
+			"statuscake_contact_group": resourceStatusCakeContactGroup(),
+			"statuscake_ssl":           resourceStatusCakeSsl(),
+			"statuscake_pagespeed":     resourceStatusCakePageSpeed(),
 		},
 
 		ConfigureFunc: providerConfigure,

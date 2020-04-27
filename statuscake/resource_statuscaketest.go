@@ -6,7 +6,7 @@ import (
 
 	"log"
 
-	"github.com/DreamItGetIT/statuscake"
+	"github.com/andrewn3wman7/statuscake"
 	"github.com/hashicorp/terraform/helper/schema"
 )
 

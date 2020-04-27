@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform/plugin"
-	"github.com/terraform-providers/terraform-provider-statuscake/statuscake"
+	"github.com/andrewn3wman7/terraform-provider-statuscake/statuscake"
 )
 
 func main() {

@@ -1,6 +1,9 @@
-module github.com/terraform-providers/terraform-provider-statuscake
+module github.com/andrewn3wman7/terraform-provider-statuscake
+
+go 1.13
 
 require (
-	github.com/DreamItGetIT/statuscake v0.0.0-20190218105717-471b24d8edfb
-	github.com/hashicorp/terraform v0.12.0
+	github.com/andrewn3wman7/statuscake v0.0.0-20200424134857-e08d912d25b9
+	github.com/hashicorp/terraform v0.12.6
+	github.com/hashicorp/terraform-plugin-sdk v1.10.0
 )
