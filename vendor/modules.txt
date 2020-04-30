@@ -8,7 +8,7 @@ cloud.google.com/go/internal/version
 cloud.google.com/go/compute/metadata
 # github.com/agext/levenshtein v1.2.2
 github.com/agext/levenshtein
-# github.com/andrewn3wman7/statuscake v0.0.0-20200424134857-e08d912d25b9
+# github.com/andrewn3wman7/statuscake v0.0.0-20200430121539-ceb599095d50
 github.com/andrewn3wman7/statuscake
 # github.com/apparentlymart/go-cidr v1.0.1
 github.com/apparentlymart/go-cidr/cidr
@@ -79,8 +79,6 @@ github.com/google/go-cmp/cmp/internal/function
 github.com/google/go-cmp/cmp/internal/value
 # github.com/google/go-querystring v1.0.0
 github.com/google/go-querystring/query
-# github.com/google/uuid v1.1.1
-github.com/google/uuid
 # github.com/googleapis/gax-go/v2 v2.0.5
 github.com/googleapis/gax-go/v2
 # github.com/hashicorp/errwrap v1.0.0
@@ -117,12 +115,9 @@ github.com/hashicorp/hcl/json/scanner
 github.com/hashicorp/hcl/json/token
 # github.com/hashicorp/hcl/v2 v2.0.0
 github.com/hashicorp/hcl/v2
-github.com/hashicorp/hcl/v2/hcldec
-github.com/hashicorp/hcl/v2/hclsyntax
-github.com/hashicorp/hcl/v2/ext/typeexpr
 github.com/hashicorp/hcl/v2/gohcl
 github.com/hashicorp/hcl/v2/hclparse
-github.com/hashicorp/hcl/v2/ext/dynblock
+github.com/hashicorp/hcl/v2/hclsyntax
 github.com/hashicorp/hcl/v2/hclwrite
 github.com/hashicorp/hcl/v2/json
 # github.com/hashicorp/hcl2 v0.0.0-20190725010614-0c3fe388e450
@@ -191,39 +186,6 @@ github.com/hashicorp/terraform/internal/modsdir
 github.com/hashicorp/terraform/internal/earlyconfig
 # github.com/hashicorp/terraform-config-inspect v0.0.0-20191115094559-17f92b0546e8
 github.com/hashicorp/terraform-config-inspect/tfconfig
-# github.com/hashicorp/terraform-plugin-sdk v1.10.0
-github.com/hashicorp/terraform-plugin-sdk/helper/hashcode
-github.com/hashicorp/terraform-plugin-sdk/helper/schema
-github.com/hashicorp/terraform-plugin-sdk/internal/configs/configschema
-github.com/hashicorp/terraform-plugin-sdk/internal/configs/hcl2shim
-github.com/hashicorp/terraform-plugin-sdk/internal/tfdiags
-github.com/hashicorp/terraform-plugin-sdk/terraform
-github.com/hashicorp/terraform-plugin-sdk/internal/helper/didyoumean
-github.com/hashicorp/terraform-plugin-sdk/internal/addrs
-github.com/hashicorp/terraform-plugin-sdk/internal/configs
-github.com/hashicorp/terraform-plugin-sdk/internal/dag
-github.com/hashicorp/terraform-plugin-sdk/internal/lang
-github.com/hashicorp/terraform-plugin-sdk/internal/moduledeps
-github.com/hashicorp/terraform-plugin-sdk/internal/plans
-github.com/hashicorp/terraform-plugin-sdk/internal/plans/objchange
-github.com/hashicorp/terraform-plugin-sdk/internal/plugin/discovery
-github.com/hashicorp/terraform-plugin-sdk/internal/providers
-github.com/hashicorp/terraform-plugin-sdk/internal/provisioners
-github.com/hashicorp/terraform-plugin-sdk/internal/states
-github.com/hashicorp/terraform-plugin-sdk/internal/states/statefile
-github.com/hashicorp/terraform-plugin-sdk/internal/version
-github.com/hashicorp/terraform-plugin-sdk/internal/lang/blocktoattr
-github.com/hashicorp/terraform-plugin-sdk/internal/lang/funcs
-github.com/hashicorp/terraform-plugin-sdk/internal/httpclient
-github.com/hashicorp/terraform-plugin-sdk/internal/registry
-github.com/hashicorp/terraform-plugin-sdk/internal/registry/regsrc
-github.com/hashicorp/terraform-plugin-sdk/internal/registry/response
-github.com/hashicorp/terraform-plugin-sdk/httpclient
-github.com/hashicorp/terraform-plugin-sdk/meta
-# github.com/hashicorp/terraform-svchost v0.0.0-20191011084731-65d371908596
-github.com/hashicorp/terraform-svchost/disco
-github.com/hashicorp/terraform-svchost
-github.com/hashicorp/terraform-svchost/auth
 # github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d
 github.com/hashicorp/yamux
 # github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af

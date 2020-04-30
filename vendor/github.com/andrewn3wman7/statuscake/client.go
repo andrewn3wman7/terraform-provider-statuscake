@@ -64,6 +64,8 @@ type Client struct {
 	testsClient Tests
 	pagespeedClient	PageSpeeds
 	sslClient	Ssls
+	perfDataClient PerfData
+	contactgroupClient	ContactGroups
 }
 
 // New returns a new Client
@@ -174,6 +176,25 @@ func (c *Client) delete(path string, v url.Values) (*http.Response, error) {
 	}
 
 	return c.doRequest(r)
+}
+
+// PerfData returns a client that implements the `Performance Data` API.
+func (c *Client) PerfData() PerfData {
+	if c.perfDataClient == nil {
+		c.perfDataClient = newPerfClient(c)
+	}
+
+	return c.perfDataClient
+}
+
+
+// ContactGroups returns a client that implements the `ContactGroups` API.
+func (c *Client) ContactGroups() ContactGroups {
+	if c.contactgroupClient == nil {
+		c.contactgroupClient = NewContactGroups(c)
+	}
+
+	return c.contactgroupClient
 }
 
 // Tests returns a client that implements the `Tests` API.
