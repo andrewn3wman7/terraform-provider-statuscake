@@ -7,5 +7,5 @@ COPY . /src/
 RUN CGO_ENABLED=0 GOOS=linux go build -mod vendor
 
 # Build the final image
-FROM hashicorp/terraform:0.11.14
+FROM hashicorp/terraform:0.12.1
 COPY --from=builder /src/terraform-provider-statuscake /root/.terraform.d/plugins/

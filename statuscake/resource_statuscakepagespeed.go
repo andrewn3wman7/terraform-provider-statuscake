@@ -4,6 +4,7 @@ import (
     "fmt"
     "log"
     "strconv"
+    "reflect"
 
     "github.com/andrewn3wman7/statuscake"
     "github.com/hashicorp/terraform/helper/schema"
@@ -40,8 +41,15 @@ func resourceStatusCakePageSpeed() *schema.Resource {
 
             "check_rate": {
                 Type:     schema.TypeInt,
-                Optional: true,
-                Default:  30,
+                Required: true,
+                ValidateFunc: func(val interface{}, key string) (warns []string, errs []error) {
+                    v := val.(int)
+                    ValidList := [7]int{1, 5, 10, 15, 30, 60, 1440}
+                    if !itemExists(ValidList, v) {
+                      errs = append(errs, fmt.Errorf("%q must be  1, 5, 10, 15, 30, 60 or 1440 got: %d", key, v))
+                    }
+                    return
+                  },
             },
 
             "contact_group": {
@@ -54,6 +62,14 @@ func resourceStatusCakePageSpeed() *schema.Resource {
             "location_iso": {
                 Type:     schema.TypeString,
                 Required: true,
+                ValidateFunc: func(val interface{}, key string) (warns []string, errs []error) {
+                    v := val.(string)
+                    ValidList := [9]string{"PRIVATE", "AU", "CA", "DE", "IN", "NL", "SG", "UK", "US"}
+                    if !itemExists(ValidList, v) {
+                      errs = append(errs, fmt.Errorf("%q must be PRIVATE, AU, CA, DE, IN, NL, SG, UK or US, got: %s", key, v))
+                    }
+                    return
+                  },
             },
 
             "name": {
@@ -192,3 +208,18 @@ func getStatusCakePagespeedInput(d *schema.ResourceData) *statuscake.PageSpeed {
     return pagespeed
 }
 
+func itemExists(arrayType interface{}, item interface{}) bool {
+	arr := reflect.ValueOf(arrayType)
+
+	if arr.Kind() != reflect.Array {
+		panic("Invalid data-type")
+	}
+
+	for i := 0; i < arr.Len(); i++ {
+		if arr.Index(i).Interface() == item {
+			return true
+		}
+	}
+
+	return false
+}
