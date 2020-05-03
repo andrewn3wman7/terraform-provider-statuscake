@@ -3,7 +3,7 @@ module github.com/andrewn3wman7/terraform-provider-statuscake
 go 1.13
 
 require (
-	github.com/andrewn3wman7/statuscake v0.0.0-20200430121539-ceb599095d50
+	github.com/andrewn3wman7/statuscake v0.0.0-20200503094532-932099226737
 	github.com/apparentlymart/go-cidr v1.0.1 // indirect
 	github.com/aws/aws-sdk-go v1.25.3 // indirect
 	github.com/golang/protobuf v1.3.4 // indirect
